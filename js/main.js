@@ -1,8 +1,6 @@
 const typewriterContainer = document.querySelector('.typewriter-container');
 
-var welcomeText = ["Hello, I am Leon.", "A Webdeveloper from Hamburg/Germany.", "This is my portfolio.", "And yes I really type this fast. :)"];
-
-console.log(welcomeText);
+var welcomeText = ["Hello, I am Leon.", "A Webdeveloper from Hamburg/Germany."];
 
 function typewriterType (container, textArray) {
     let totalChars = 0;
@@ -24,8 +22,5 @@ function typewriterType (container, textArray) {
     }
 }
 
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-}  
 
 typewriterType(typewriterContainer, welcomeText);
