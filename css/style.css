@@ -10,6 +10,9 @@
     --text-color: #eee;
 }
 
+html {
+}
+
 body {
     font-family: 'Roboto Mono', sans-serif;
     background-color: #0f0f0f;
@@ -22,7 +25,6 @@ body {
 .container {
     /*scroll-snap-type: y proximity;*/
     height: 100%;
-    overflow-y: scroll;
 }
 
 section {
@@ -51,6 +53,36 @@ section {
     height: 0.3em;
     background-color: var(--text-color);
     animation: 1s blink step-end infinite;
+}
+
+.image-wrapper {
+    width: 50%;
+    margin: 0 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.image-wrapper img {
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.text-wrapper {
+    width: 50%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
 }
 
 .down-arrow {
