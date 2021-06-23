@@ -39,6 +39,10 @@ section {
     text-align: center;
 }
 
+.typewriter-container p {
+    display: inline-block;
+}
+
 
 
 .selected-character {
@@ -116,6 +120,15 @@ section {
         opacity: 0;
     }
 }
+
+@keyframes move-up-left {
+    from,
+    to {
+
+    }
+}
+
+
 
 @keyframes appear {
     from,

@@ -8,32 +8,82 @@ const section3TextContainer = document.querySelector('#section3-text');
 
 const section4TextContainer = document.querySelector('#section4-text');
 
-var welcomeText = ["Hello, I am Leon.", "A Webdeveloper from Hamburg/Germany."];
 
-var welcomeTextSmall = ["Hello,", "I am Leon.", "A Webdeveloper from ", "Hamburg/Germany."];
+
+var welcomeText = ["Hello, I am", "|⠀Leon Geldschläger", ".", "\\A Webdeveloper from Hamburg/Germany."];
+
+var welcomeTextSmall = ["Hello,", "\\I am", "|Leon Geldschläger.", "\\A Webdeveloper from ", "Hamburg/Germany."];
+
+const typeSpeed = 100;
 
 
 function typewriterType (container, textArray) {
+    let allLinesArray = [];
     let totalChars = 0;
     for (let j = 0; j < textArray.length; j++) {
         setTimeout(() => {
             let newLine = document.createElement('p');
             newLine.classList.add('selected-character');
             container.appendChild(newLine);
+            allLinesArray.push(newLine);
             for (let i = 0; i < textArray[j].length; i++) {
                 setTimeout(() => {
                     if (i === textArray[j].length-1 && j !== textArray.length-1) {
                         newLine.classList.remove('selected-character');
                     }
-                    newLine.insertAdjacentHTML('beforeend', textArray[j][i]);
-                }, i*140);
+                    /*
+                    let newChar = textArray[j][i];
+                    let insideSpan = false;
+                    console.log(newLine.children[i-1]);
+                    if (newChar === "<") {
+                        newLine.insertAdjacentHTML('beforeend', "<span>");
+                        insideSpan = true;
+                    } else if (insideSpan === true) {
+                        newLine.firstChild.insertAdjacentHTML('beforeend', textArray[j][i]);
+                    } else {
+                        newLine.insertAdjacentHTML('beforeend', textArray[j][i]);
+                    }
+                    */
+                    if (i === 0 && textArray[j][0] === "\\") {
+                        newLine.style = "display: block;";
+                    } 
+                    else if (i === 0 && textArray[j][0] === "|") {
+                        newLine.id = "intro-name";
+                        allLinesArray.pop();
+                    } else {
+                        newLine.insertAdjacentHTML('beforeend', textArray[j][i]);
+                    }
+                }, i*typeSpeed);
             }
-        }, totalChars*140);
+        }, totalChars*typeSpeed);
         totalChars += textArray[j].length;
     }
+    console.log(allLinesArray);
+    setTimeout(()=> {
+        let introName = document.querySelector('#intro-name');
+        moveElementTopLeft(introName);
+        allLinesArray.forEach(line => {
+            disappearElement(line);
+        });    
+    }, totalChars*typeSpeed+300);
 }
 
+function moveElementTopLeft (element) {
+    gsap.to(element, {
+        x: -element.getBoundingClientRect().x+20,
+        y: -element.getBoundingClientRect().y+30,
+        duration: 1.5
+    });
+}
 
+function disappearElement (element) {
+    gsap.to(element, {
+        opacity: 0,
+        duration: 1
+    });
+}
+
+/*
 ScrollTrigger.create({
     trigger: "#section2",
     start: "-200px",
@@ -72,6 +122,7 @@ gsap.to("#snake-image", {
     opacity: 1,
     duration: 4
 });
+*/
 
 
 
