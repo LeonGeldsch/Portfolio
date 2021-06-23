@@ -10,9 +10,9 @@ const section4TextContainer = document.querySelector('#section4-text');
 
 
 
-var welcomeText = ["Hello, I am", "|⠀Leon Geldschläger", ".", "\\A Webdeveloper from Hamburg/Germany."];
+var welcomeText = ["Hello, I am⠀", "|Leon Geldschläger", ".", "\\A Webdeveloper from Hamburg/Germany."];
 
-var welcomeTextSmall = ["Hello,", "\\I am", "|Leon Geldschläger.", "\\A Webdeveloper from ", "Hamburg/Germany."];
+var welcomeTextSmall = ["Hello,⠀", "I am⠀", "|Leon Geldschläger.", "A Webdeveloper from ", "Hamburg/Germany."];
 
 const typeSpeed = 100;
 
@@ -71,7 +71,7 @@ function typewriterType (container, textArray) {
 function moveElementTopLeft (element) {
     gsap.to(element, {
         x: -element.getBoundingClientRect().x+20,
-        y: -element.getBoundingClientRect().y+30,
+        y: -element.getBoundingClientRect().y+20,
         duration: 1.5
     });
 }
