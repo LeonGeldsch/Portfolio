@@ -14,7 +14,7 @@ var welcomeText = ["Hello, I am⠀", "|Leon Geldschläger", ".", "\\A Webdevelop
 
 var welcomeTextSmall = ["Hello,⠀", "I am⠀", "|Leon Geldschläger.", "A Webdeveloper from ", "Hamburg/Germany."];
 
-const typeSpeed = 100;
+const typeSpeed = 120;
 
 
 function typewriterType (container, textArray) {
@@ -44,10 +44,13 @@ function typewriterType (container, textArray) {
                         newLine.insertAdjacentHTML('beforeend', textArray[j][i]);
                     }
                     */
+                   
                     if (i === 0 && textArray[j][0] === "\\") {
                         newLine.style = "display: block;";
-                    } 
-                    else if (i === 0 && textArray[j][0] === "|") {
+                    } else if (textArray[j][i] === "⠀") {
+                        console.log("test");
+                        newLine.insertAdjacentHTML('beforeend', "&nbsp;");
+                    } else if (i === 0 && textArray[j][0] === "|") {
                         newLine.id = "intro-name";
                         allLinesArray.pop();
                     } else {
