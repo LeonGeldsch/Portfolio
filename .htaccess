@@ -1,1 +1,3 @@
+RewriteEngine On
+
 ErrorDocument 404 http://example.com/404/
