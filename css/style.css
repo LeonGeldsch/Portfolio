@@ -10,7 +10,7 @@
     --main-white: #fefefe;
     --main-grey: #f4f4f4;
     --main-dark-grey: #aaaaaa;
-    --main-black: #222;
+    --main-black: rgb(34, 34, 34);
     --main-blue: #90caf9;
     --main-dark-blue: #249cff;
 }
@@ -26,23 +26,24 @@ body {
 }
 
 .page-wrapper {
-    display: grid;
-    grid-template-columns: 300px auto ;
-    grid-template-rows: 70px auto;
-    grid-template-areas: 
-        "nav nav"
-        "side main";
-    height: 100vh;
+    animation: fade-in .5s ease-out;
+}
+
+.content-wrapper {
+    background-color: var(--main-black);
+    background-image: url('../img/html_stock.jpg');
+}
+
+.background-filter {
+    min-height: calc(100vh - 70px);
     width: 100vw;
-    position: fixed;
+    background-color: rgba(34, 34, 34, 0.781);
 }
 
 .main-nav {
-    grid-area: nav;
     display: flex;
     justify-content: space-between;
     height: 70px;
-    border-bottom: 1px solid var(--main-grey);
     align-items: center;
     padding-left: 20px;
 }
@@ -68,6 +69,16 @@ body {
     padding: 0 20px;
 }
 
+.dark-mode-icon {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.dark-mode-icon:hover {
+    background-color: var(--main-blue);
+}
+
 .nav-links li a:hover {
     background-color: var(--main-blue);
 }
@@ -75,6 +86,22 @@ body {
 .icon {
     width: 30px;
 }
+
+
+
+/*
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 300px auto ;
+    grid-template-rows: 70px auto;
+    grid-template-areas: 
+        "nav nav"
+        "side main";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
 
 .sidebar {
     height: calc(100vh - 70px);
@@ -92,6 +119,15 @@ body {
 
 .article-image {
     width: 100%;
+}
+
+.home-section {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--main-black);
+    cursor: pointer;
 }
 
 .projects-list {
@@ -139,12 +175,20 @@ li:first-child:nth-last-child(1) {
 .main-content {
     grid-area: main;
     overflow-y: auto;
+    position: relative;
 }
 
 .project-wrapper {
     margin: 0 auto;
     max-width: 1040px;
+    opacity: 0;
+    height: 0;
+    transition: opacity .5s ease-out;
     padding: 50px;
+}
+.project-wrapper.active {
+    opacity: 1;
+    height: auto;
 }
 
 .tech-and-libs {
@@ -173,6 +217,7 @@ li:first-child:nth-last-child(1) {
 .slideshow-image {
     display: none;
     width: 100%;
+    margin-bottom: 20px;
 }
 .slideshow-image.active {
     display: block;
@@ -195,7 +240,8 @@ li:first-child:nth-last-child(1) {
 
 
 
-/* INPUT STYLES */
+
+/* INPUT STYLES 
 
 .outlined-input {
     position: relative;
@@ -209,7 +255,8 @@ li:first-child:nth-last-child(1) {
     outline: 1px solid var(--valid-green);
 }
 
-.outlined-input input {
+.outlined-input input,
+.outlined-input textarea {
     color: var(--main-black);
     height: 4rem;
     outline: 1px solid var(--main-black);
@@ -220,6 +267,12 @@ li:first-child:nth-last-child(1) {
     font-size: 20px;
     transition: .1s ease-in-out;
     width: 100%;
+}
+
+.outlined-input textarea {
+    resize: none;
+    height: 150px;
+    padding: 20px;
 }
 
 .outlined-input label {
@@ -237,20 +290,58 @@ li:first-child:nth-last-child(1) {
 }
 
 .outlined-input input:not(:placeholder-shown) ~ label,
-.outlined-input input:focus ~ label {
+.outlined-input input:focus ~ label,
+.outlined-input textarea:not(:placeholder-shown) ~ label,
+.outlined-input textarea:focus ~ label {
     top: 0px;
     left: 10px;
     font-size: 1rem;
 }
 
-.outlined-input input:focus {
+.outlined-input input:focus,
+.outlined-input textarea:focus {
     outline: 1px solid var(--main-dark-blue) !important;
 }
-.outlined-input input:hover {
+.outlined-input input:hover,
+.outlined-input textarea:hover {
     outline: 1px solid var(--main-dark-grey);
 }
-.outlined-input input:focus ~ label {
+.outlined-input input:focus ~ label,
+.outlined-input textarea:focus ~ label {
     color: var(--main-dark-blue) !important;
 }
 
-/* END OF INPUT STYLES */
+/* END OF INPUT STYLES 
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        display: none;
+    }
+    to {
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+*/
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

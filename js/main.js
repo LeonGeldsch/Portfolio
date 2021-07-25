@@ -1,5 +1,10 @@
 const ALL_PROJECTS_SECTIONS = document.querySelectorAll('.projects-headline');
 
+const ALL_PROJECTS_LIST_ITEMS = document.querySelectorAll('.projects-list li');
+
+const ALL_PROJECT_WRAPPERS = document.querySelectorAll('.project-wrapper ');
+
+
 const typeSpeed = 120;
 
 var welcomeText = ["Hey, I am⠀Leon :)"];
@@ -47,5 +52,15 @@ ALL_PROJECTS_SECTIONS.forEach(section => {
             document.querySelectorAll('.projects-section.expanded .projects-headline').forEach(section => {section.parentNode.classList.remove('expanded')});
             section.parentNode.classList.add('expanded');
         }
+    });
+});
+
+
+ALL_PROJECTS_LIST_ITEMS.forEach((element, i) => {
+    element.addEventListener('click', ()=> {
+        ALL_PROJECT_WRAPPERS.forEach(wrapper => {
+            wrapper.classList.remove('active');
+        });
+        ALL_PROJECT_WRAPPERS[i].classList.add('active');
     });
 });
