@@ -29,15 +29,19 @@ body {
     animation: fade-in .5s ease-out;
 }
 
-.content-wrapper {
-    background-color: var(--main-black);
+.background {
     background-image: url('../img/html_stock.jpg');
 }
 
 .background-filter {
     min-height: calc(100vh - 70px);
     width: 100vw;
-    background-color: rgba(34, 34, 34, 0.781);
+    background-color: rgba(34, 34, 34, 0.8);
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 1040px;
 }
 
 .main-nav {
@@ -85,6 +89,19 @@ body {
 
 .icon {
     width: 30px;
+}
+
+
+
+/* SLIDESHOW STYLES */
+
+.slideshow {
+    background-color: black;
+}
+
+.slideshow-item {
+    display: none;
+    width: 100%;
 }
 
 
