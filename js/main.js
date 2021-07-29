@@ -40,21 +40,21 @@ function goLeft () {
         hidden = right.parentNode.nextElementSibling.firstChild;
     }
 
+    left.style.zIndex = "0";
     left.classList.remove('left');
     left.classList.add('hidden');
-    left.style.zIndex = "0";
 
+    active.style.zIndex = "1";
     active.classList.remove('active');
     active.classList.add('left');
-    active.style.zIndex = "1";
 
+    right.style.zIndex = "3";
     right.classList.remove('right');
     right.classList.add('active');
-    right.style.zIndex = "3";
 
+    hidden.style.zIndex = "2";
     hidden.classList.remove('hidden');
     hidden.classList.add('right');
-    hidden.style.zIndex = "2";
 }
 
 
@@ -73,20 +73,20 @@ function goRight () {
         hidden = left.parentNode.previousElementSibling.firstChild;
     }
 
+    left.style.zIndex = "3";
     left.classList.remove('left');
     left.classList.add('active');
-    left.style.zIndex = "3";
 
+    active.style.zIndex = "1";
     active.classList.remove('active');
     active.classList.add('right');
-    active.style.zIndex = "1";
 
+    right.style.zIndex = "0";
     right.classList.remove('right');
     right.classList.add('hidden');
-    right.style.zIndex = "0";
 
+    hidden.style.zIndex = "2";
     hidden.classList.remove('hidden');
     hidden.classList.add('left');
-    hidden.style.zIndex = "2";
 
 }
