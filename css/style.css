@@ -40,8 +40,13 @@ body {
 }
 
 .content-wrapper {
-    margin: 0 auto;
-    max-width: 1040px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+    color: white;
+    gap: 50px;
+    padding-top: 50px;
 }
 
 .main-nav {
@@ -96,12 +101,111 @@ body {
 /* SLIDESHOW STYLES */
 
 .slideshow {
-    background-color: black;
+    width: 50%;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+.slideshow-title {
+    text-align: center;
+}
+
+.slideshow-controls {
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.slideshow-controls div {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    border: 1px solid var(--main-dark-grey);
+    background-color: var(--main-black);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.slideshow-controls div:hover {
+    border-color: var(--main-white);
+}
+.slideshow-controls div:active {
+    border-color: var(--main-blue);
+}
+
+.slideshow-items {
+    position: relative;
 }
 
 .slideshow-item {
-    display: none;
+    position: absolute;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+.slideshow-item.hidden {
+    z-index: -1;
+    transform: scale(0.5) translateY(-20%);
+}
+
+.slideshow-item img {
+    width: 100%;
+    pointer-events: none;
+}
+
+.slideshow-item.left,
+.slideshow-item.active,
+.slideshow-item.right {
+    display: block;
+}
+
+.slideshow-item.left {
+    transform: scale(0.5) translate(-100%, -20%);
+    z-index: 0;
+}
+.slideshow-item.left:hover {
+    transform: scale(0.55) translate(-100%, -20%);
+}
+
+.slideshow-item.active {
+    z-index: 1;
+}
+.slideshow-item.active:hover {
+    transform: scale(1.1);
+}
+
+.slideshow-item.right {
+    transform: scale(0.5) translate(100%, -20%);
+    z-index: 0;
+}
+.slideshow-item.right:hover {
+    transform: scale(0.55) translate(100%, -20%);
+}
+
+
+.slideshow-items a:nth-child(1) .slideshow-item {
+    background-image: url(../img/bedconfigurator.PNG);
+}
+.slideshow-items a:nth-child(2) .slideshow-item {
+    background-image: url(../img/discord-clone.PNG);
+}
+.slideshow-items a:nth-child(3) .slideshow-item {
+    background-image: url(../img/mario.PNG);
+}
+.slideshow-items a:nth-child(4) .slideshow-item {
+    background-image: url(../img/terminal.PNG);
+}
+.slideshow-items a:nth-child(5) .slideshow-item {
+    background-image: url(../img/snake_game.PNG);
 }
 
 
@@ -360,5 +464,19 @@ li:first-child:nth-last-child(1) {
     }
     to {
         opacity: 1;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .nav-links {
+        display: none;
+    }
+    .slideshow-controls div {
+        width: 100px;
+    }
+    .nav-logo, h1 {
+        font-size: 2rem;
     }
 }
