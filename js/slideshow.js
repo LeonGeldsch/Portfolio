@@ -4,7 +4,6 @@ var allSlideshowItems = document.querySelectorAll('.slideshow-item'),
     index = 3;
 
 
-
 function checkIndex () {
     if (index >= allSlideshowItems.length) {
         index = 0;
@@ -17,11 +16,11 @@ function checkIndex () {
 let clicks = 0;
 
 nextButton.addEventListener('click', ()=> {
-    goRight();
+    goLeft();
 });
 
 previousButton.addEventListener('click', ()=> {
-    goLeft();
+    goRight();
 });
 
 
@@ -34,10 +33,10 @@ function goLeft () {
     let right = document.querySelector('.slideshow-item.right');
     let hidden;
 
-    if (!right.parentNode.nextElementSibling) {
+    if (!right.nextElementSibling) {
         hidden = allSlideshowItems[0];
     } else {
-        hidden = right.parentNode.nextElementSibling.firstChild;
+        hidden = right.nextElementSibling;
     }
 
     left.style.zIndex = "0";
@@ -67,10 +66,10 @@ function goRight () {
     let right = document.querySelector('.slideshow-item.right');
     let hidden;
 
-    if (!left.parentNode.previousElementSibling) {
+    if (!left.previousElementSibling) {
         hidden = allSlideshowItems[allSlideshowItems.length-1];
     } else {
-        hidden = left.parentNode.previousElementSibling.firstChild;
+        hidden = left.previousElementSibling;
     }
 
     left.style.zIndex = "3";
@@ -88,5 +87,4 @@ function goRight () {
     hidden.style.zIndex = "2";
     hidden.classList.remove('hidden');
     hidden.classList.add('left');
-
 }
