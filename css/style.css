@@ -190,7 +190,7 @@ body {
     pointer-events: none;
     box-shadow: 0px 0px 20px 5px black;
     border-radius: 3px;
-    transition: box-shadow .7s ease-out;
+    transition: box-shadow .8s ease-out;
 }
 
 .slideshow-item.left,
@@ -208,8 +208,12 @@ body {
     box-shadow: 0px 0px 20px 0px black;
 }
 .slideshow-item.left:hover {
-    transform: scale(0.55) translate(-100%, -20%);
+    transform: scale(0.55) translate(-100%, -15%);
     filter: none;
+    transition: transform .8s ease-out;
+}
+.slideshow-item.left:hover img {
+    box-shadow: 0 0 20px 0px black;
 }
 
 .slideshow-item.active {
@@ -217,6 +221,10 @@ body {
 }
 .slideshow-item.active:hover {
     transform: scale(1.1);
+    transition: transform .8s ease-out;
+}
+.slideshow-item.active:hover img {
+    box-shadow: 0px 0px 20px 0px black;
 }
 
 .slideshow-item.right {
@@ -228,8 +236,12 @@ body {
     box-shadow: 0px 0px 20px 0px black;
 }
 .slideshow-item.right:hover {
-    transform: scale(0.55) translate(100%, -20%);
+    transform: scale(0.55) translate(100%, -15%);
     filter: none;
+    transition: transform .8s ease-out;
+}
+.slideshow-item.right:hover img {
+    box-shadow: 0 0 20px 0px black;
 }
 
 
