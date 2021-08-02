@@ -149,6 +149,7 @@ body {
     align-items: center;
     gap: 50px;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 .slideshow-controls {
     color: white;
@@ -202,7 +203,7 @@ body {
 .slideshow-item.left {
     transform: scale(0.5) translate(-100%, -20%);
     z-index: 2;
-    filter: blur(2px);
+    xfilter: blur(2px);
 }
 .slideshow-item.left img {
     box-shadow: 0px 0px 20px 0px black;
@@ -230,7 +231,7 @@ body {
 .slideshow-item.right {
     transform: scale(0.5) translate(100%, -20%);
     z-index: 1;
-    filter: blur(2px);
+    xfilter: blur(2px);
 }
 .slideshow-item.right img {
     box-shadow: 0px 0px 20px 0px black;
