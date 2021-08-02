@@ -251,12 +251,12 @@ body {
  */
 
 .slideshow-title span {
-    transition: all .3s ease-out;
+    transition: all .3s cubic-bezier(.65,.05,.36,1);
 }
 
 .slideshow-title:hover {
     color: red;
-    transition: all .3s ease-out;
+    transition: all .3s cubic-bezier(.65,.05,.36,1);
 }
 
 .slideshow-title span:nth-child(1):hover ~ span,
