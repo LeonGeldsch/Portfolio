@@ -673,6 +673,7 @@ li:first-child:nth-last-child(1) {
 
     .slideshow-items {
         width: 90%;
+        height: calc(90vw / (16 / 9));
     }
     .slideshow-item.left {
         transform: scale(0.5) translate(0%, 100%);
