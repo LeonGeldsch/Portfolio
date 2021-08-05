@@ -135,8 +135,7 @@ body {
     width: 50%;
     position: relative;
     margin: 0 auto;
-    height: auto;
-    aspect-ratio: 16/9;
+    height: calc(50vw / (16 / 9));
 }
 .slideshow-title {
     text-align: center;
