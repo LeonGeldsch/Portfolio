@@ -147,6 +147,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    grid-gap: 50px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -154,6 +155,7 @@ body {
     color: white;
     display: flex;
     gap: 30px;
+    grid-gap: 30px;
 }
 
 .slideshow-controls div {
@@ -684,8 +686,10 @@ li:first-child:nth-last-child(1) {
     .slideshow-controls {
         flex-direction: column;
         gap: 20px;
+        grid-gap: 20px;
     }
     .slideshow-wrapper {
         gap: 120px;
+        grid-gap: 120px;
     }
 }
