@@ -676,6 +676,7 @@ li:first-child:nth-last-child(1) {
     .slideshow-items {
         width: 90%;
         height: calc(90vw / (16 / 9));
+        margin: 120px 0;
     }
     .slideshow-item.left {
         transform: scale(0.5) translate(0%, 100%);
@@ -689,7 +690,7 @@ li:first-child:nth-last-child(1) {
         grid-gap: 20px;
     }
     .slideshow-wrapper {
-        gap: 120px;
-        grid-gap: 120px;
+        gap: 0;
+        grid-gap: 0;
     }
 }
