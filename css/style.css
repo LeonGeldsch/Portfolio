@@ -30,9 +30,7 @@ body {
 }
 
 .background {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: var(--main-white);
 }
 
 .background-filter {
@@ -242,129 +240,96 @@ body {
  * Slideshow title styles
  */
 
-.slideshow-title span {
-    transition: all .3s cubic-bezier(.65,.05,.36,1);
-}
 
 .slideshow-title:hover {
     color: red;
-    transition: all .3s cubic-bezier(.65,.05,.36,1);
 }
 
-.slideshow-title span:nth-child(1):hover ~ span,
-.slideshow-title span:nth-child(1):hover {
+.slideshow-title span:nth-child(1):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(2):hover ~ span,
-.slideshow-title span:nth-child(2):hover  {
+.slideshow-title span:nth-child(2):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(3):hover ~ span,
-.slideshow-title span:nth-child(3):hover  {
+.slideshow-title span:nth-child(3):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(4):hover ~ span,
-.slideshow-title span:nth-child(4):hover  {
+.slideshow-title span:nth-child(4):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(5):hover ~ span,
-.slideshow-title span:nth-child(5):hover  {
+.slideshow-title span:nth-child(5):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(6):hover ~ span,
-.slideshow-title span:nth-child(6):hover  {
+.slideshow-title span:nth-child(6):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(7):hover ~ span,
-.slideshow-title span:nth-child(7):hover  {
+.slideshow-title span:nth-child(7):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(8):hover ~ span,
-.slideshow-title span:nth-child(8):hover  {
+.slideshow-title span:nth-child(8):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(9):hover ~ span,
-.slideshow-title span:nth-child(9):hover  {
+.slideshow-title span:nth-child(9):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(10):hover ~ span,
-.slideshow-title span:nth-child(10):hover  {
+.slideshow-title span:nth-child(10):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(11):hover ~ span,
-.slideshow-title span:nth-child(11):hover  {
+.slideshow-title span:nth-child(11):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(12):hover ~ span,
-.slideshow-title span:nth-child(12):hover  {
+.slideshow-title span:nth-child(12):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(13):hover ~ span,
-.slideshow-title span:nth-child(13):hover  {
+.slideshow-title span:nth-child(13):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(14):hover ~ span,
-.slideshow-title span:nth-child(14):hover  {
+.slideshow-title span:nth-child(14):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(15):hover ~ span,
-.slideshow-title span:nth-child(15):hover  {
+.slideshow-title span:nth-child(15):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(16):hover ~ span,
-.slideshow-title span:nth-child(16):hover  {
+.slideshow-title span:nth-child(16):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(17):hover ~ span,
-.slideshow-title span:nth-child(17):hover  {
+.slideshow-title span:nth-child(17):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(18):hover ~ span,
-.slideshow-title span:nth-child(18):hover  {
+.slideshow-title span:nth-child(18):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(19):hover ~ span,
-.slideshow-title span:nth-child(19):hover  {
+.slideshow-title span:nth-child(19):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(20):hover ~ span,
-.slideshow-title span:nth-child(20):hover  {
+.slideshow-title span:nth-child(20):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(21):hover ~ span,
-.slideshow-title span:nth-child(21):hover  {
+.slideshow-title span:nth-child(21):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(22):hover ~ span,
-.slideshow-title span:nth-child(22):hover  {
+.slideshow-title span:nth-child(22):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(23):hover ~ span,
-.slideshow-title span:nth-child(23):hover  {
+.slideshow-title span:nth-child(23):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(24):hover ~ span,
-.slideshow-title span:nth-child(24):hover  {
+.slideshow-title span:nth-child(24):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(25):hover ~ span,
-.slideshow-title span:nth-child(25):hover  {
+.slideshow-title span:nth-child(25):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(26):hover ~ span,
-.slideshow-title span:nth-child(26):hover  {
+.slideshow-title span:nth-child(26):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(27):hover ~ span,
-.slideshow-title span:nth-child(27):hover  {
+.slideshow-title span:nth-child(27):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(28):hover ~ span,
-.slideshow-title span:nth-child(28):hover  {
+.slideshow-title span:nth-child(28):hover ~ span {
     color: var(--main-blue);
 }
-.slideshow-title span:nth-child(29):hover ~ span,
-.slideshow-title span:nth-child(29):hover {
+.slideshow-title span:nth-child(29):hover ~ span {
     color: var(--main-blue);
 }
 

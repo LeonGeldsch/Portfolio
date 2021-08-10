@@ -1,0 +1,1 @@
+var darkModeIcon = document.querySelector('.dark-mode-icon');
