@@ -1,5 +1,5 @@
 var frontImages = document.querySelectorAll('.left img, .active img, .right img');
-var backImages = document.querySelector('.hidden img');
+var backImages = document.querySelectorAll('.hidden img');
 
 function loadImages() {
     for (let i = 0; i < frontImages.length; i++) {
