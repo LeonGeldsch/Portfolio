@@ -90,7 +90,6 @@ body {
 .nav-links li a,
 .dark-mode-icon,
 .mobile-menu-icon {
-    xoutline: 1px solid rgba(135, 191, 255, 0);
     transition: border-radius .2s ease-in-out, outline .2s ease-in-out, background-color .2s ease-out;
 }
 
@@ -98,8 +97,7 @@ body {
 .dark-mode-icon:hover,
 .mobile-menu-icon:hover {
     background-color: var(--main-blue);
-    border-radius: 20px;
-    xoutline: 2px solid var(--main-dark-blue);
+    border-radius: 50%;
 }
 
 .nav-links li a:active,
@@ -107,7 +105,6 @@ body {
 .mobile-menu-icon:active {
     background-color: rgb(107, 255, 107);
     border-radius: 50%;
-    xoutline: 2px solid rgb(51, 184, 51);
 
 }
 
@@ -137,7 +134,16 @@ body {
 }
 .slideshow-title {
     text-align: center;
+    text-shadow: 
+        0.025em 0.025em 0 green,
+        0.05em 0.05em 0 red,
+        0.075em 0.075em 0 blue;
+    transition: all .3s;
 }
+.slideshow-title span {
+    transition: all .3s;
+}
+
 .slideshow-wrapper {
     position: relative;
     width: 100%;
