@@ -33,6 +33,15 @@ body {
     background-color: var(--main-white);
 }
 
+#matrix-background {
+    position: absolute;
+    background-color: var(--main-black);
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    transition: opacity 3s;
+}
+
 .background-filter {
     min-height: calc(100vh - 70px);
     width: 100%;
