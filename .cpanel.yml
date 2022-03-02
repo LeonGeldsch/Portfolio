@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/leonzmed/github/baeckerei-kock-cms/
+    - /bin/cp img $DEPLOYPATH
+    - /bin/cp css $DEPLOYPATH
+    - /bin/cp js $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
